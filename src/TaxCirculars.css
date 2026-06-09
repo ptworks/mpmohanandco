@@ -1,0 +1,85 @@
+.tax-circulars-container {
+  padding: 40px;
+  background: #f4f7fc;
+  border-radius: 16px;
+}
+
+.header-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.header-section h2 {
+  color: #1a237e;
+  font-size: 24px;
+}
+
+.live-indicator {
+  background: red;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  animation: pulse 1s infinite;
+}
+
+.circulars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.circular-card {
+  background: white;
+  border-radius: 14px;
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.circular-card:hover {
+  transform: translateY(-6px);
+}
+
+.circular-card h3 {
+  font-size: 16px;
+  color: #0d47a1;
+  margin-bottom: 14px;
+}
+
+.circular-card p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.circular-card .date {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.circular-card button {
+  background: #1a237e;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.loader {
+  padding: 30px;
+  text-align: center;
+  font-size: 16px;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
