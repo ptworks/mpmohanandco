@@ -1,4 +1,5 @@
 import mpmohan from '../src/assets/mpmohan.png'
+import slider1 from '../src/assets/slider1.png'
 
 export const teamMembers = [
   {
@@ -37,7 +38,7 @@ export const teamMembers = [
 
 export const sliderImages = [
   {
-    url: '../src/assets/slider1.png',
+    url: slider1,
     title: 'Chartered Accountants & Business Advisors',
     desc: 'Delivering excellence and trust in financial reporting, tax planning, and corporate compliance.'
   },

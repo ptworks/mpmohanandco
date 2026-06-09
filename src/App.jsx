@@ -14,6 +14,7 @@ import IncomeTaxTicker from './IncomeTaxTicker';
 import NewsAndResources from './NewsAndResources';
 import GstNews from './GstNews';
 import McaNews from './McaNews';
+import calogo from '../src/assets/calogo.png'
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
@@ -44,7 +45,7 @@ function App() {
         
         <Link to="/" className="logo">
          
-          <div> <img src="../src/assets/calogo.png" alt="CA M P Mohan"  className="logo1"/>
+          <div> <img src={calogo} alt="CA M P Mohan"  className="logo1"/>
               <div className='logotitle'> M.P. <span>Mohan</span> & Co 
                <div style={{ fontSize: '16px', fontWeight: 'normal', color: '#f37920', marginTop: '-5px', paddingLeft:"57px" }}>
             Chartered Accountants
