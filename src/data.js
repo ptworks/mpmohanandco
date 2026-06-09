@@ -1,9 +1,11 @@
+import mpmohan from '../src/assets/mpmohan.png'
+
 export const teamMembers = [
   {
     id: 'ca-mp-mohan',
     name: 'CA M P Mohan',
     role: 'Founder & Senior Partner',
-    image: '/assets/mpmohan.png',
+    image: mpmohan,
     bio: 'Qualified in 1977, with over 47 years of expertise in Income Tax Advisory, Tax Planning, and Corporate Consulting. Built the firm with a vision of honesty and integrity.',
     works: ['Led 500+ successful tax audits across diverse industries.', 'Advises top-tier IT companies and financial institutions.', 'Key speaker at multiple national financial summits on taxation laws.']
   },
