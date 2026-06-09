@@ -1,5 +1,9 @@
 import mpmohan from '../src/assets/mpmohan.png'
+import abhishek from '../src/assets/abhishek.png'
+import gurudatta from '../src/assets/gurudatta.png'
+import mahesh from '../src/assets/mahesh.png'
 import slider1 from '../src/assets/slider1.png'
+import slider2 from '../src/assets/slider2.png'
 
 export const teamMembers = [
   {
@@ -14,7 +18,7 @@ export const teamMembers = [
     id: 'ca-gurudatta-d',
     name: 'CA Gurudatta D',
     role: 'Partner',
-    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400&h=400',
+    image: gurudatta,
     bio: 'Qualified since 2020 with a DISA certification. Leads Income Tax and professional advisory services with a modern approach.',
     works: ['Specializes in Information System Audits for corporate clients.', 'Expert in direct taxation strategies and modern compliance.', 'Implemented automated tax filing and tracking systems for 50+ clients.']
   },
@@ -22,7 +26,7 @@ export const teamMembers = [
     id: 'ca-abhishek',
     name: 'CA Abhishek',
     role: 'Partner',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400&h=400',
+    image: abhishek,
     bio: 'Specializes in Company Law Compliance, Statutory Audit, GST, and Due Diligence. Has a keen eye for compliance nuances.',
     works: ['Managed comprehensive due diligence for 3 major corporate acquisitions.', 'Heads the firm’s GST compliance and advisory team.', 'Resolves complex corporate structuring and cross-border taxation issues.']
   },
@@ -30,7 +34,7 @@ export const teamMembers = [
     id: 'ca-mahesh-prasad',
     name: 'CA Mahesh Prasad',
     role: 'Manager - GST',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400&h=400',
+    image: mahesh,
     bio: 'Proven expertise in GST Compliance and Advisory Services. Leads the GST team efficiently and stays constantly updated with the latest regulations.',
     works: ['Handles end-to-end GST refunds for large export clients.', 'Conducts regular GST training workshops for client accounts teams.', 'Saved clients substantial penalties via proactive compliance reviews.']
   }
@@ -43,7 +47,7 @@ export const sliderImages = [
     desc: 'Delivering excellence and trust in financial reporting, tax planning, and corporate compliance.'
   },
   {
-    url: 'https://images.unsplash.com/photo-1554200876-56c2f25224fa?auto=format&fit=crop&q=80&w=1200&h=600',
+    url: slider2,
     title: 'Expertise You Can Count On',
     desc: 'With over four decades of legacy, we ensure your business meets its goals with precision.'
   }

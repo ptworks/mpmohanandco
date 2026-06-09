@@ -504,7 +504,8 @@ ul { list-style: none; }
 
 .foot-logo-img {
   font-family: Arial, sans-serif;
-  color: var(--primary);
+  color: #145886;
+  letter-spacing: 1px;
   font-size: 1.8rem;
   margin-bottom: 15px;
   font-weight: 900;
@@ -512,7 +513,7 @@ ul { list-style: none; }
 }
 
 .foot-logo-img span {
-  color: var(--accent);
+  color: ;
 }
 
 .foot-desc {

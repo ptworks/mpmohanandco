@@ -15,6 +15,8 @@ import NewsAndResources from './NewsAndResources';
 import GstNews from './GstNews';
 import McaNews from './McaNews';
 import calogo from '../src/assets/calogo.png'
+import mpmohan from '../src/assets/mpmohan.png'
+import { TextAlignStart } from 'lucide-react';
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
@@ -57,7 +59,7 @@ function App() {
         </Link>
         <div className="header-contact">
           <a href="mailto:info@mpmohan.com" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <i className="fas fa-envelope"></i> info@mpmohan.com
+            <i className="fas fa-envelope"></i> info@mpmohanandco.com
           </a>
           <a href="tel:+919876543210" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <i className="fas fa-phone-alt"></i> +91 98765 43210
@@ -170,7 +172,7 @@ function App() {
       {/* Pre-Footer Contact Strip */}
       <div className="pre-footer-contact">
         <div className="contact-person-img">
-          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=200&h=200" alt="CA M P Mohan" />
+          <img src={mpmohan} alt="CA M P Mohan" />
         </div>
         <div className="contact-text">
           <h3>Feel free to contact us</h3>
@@ -186,7 +188,7 @@ function App() {
           <div className="footer-col" style={{ gridColumn: 'span 2' }}>
             <h3 className="foot-logo-img">
               MP<span>Mohan</span> & Co
-              <div style={{ fontSize: '0.8rem', fontWeight: 'normal', color: 'var(--accent)', marginTop: '-5px' }}>
+              <div style={{ fontSize: '0.8rem', fontWeight: 'normal', color: '', marginTop: '-5px' }}>
                 chartered accountants
               </div>
             </h3>
@@ -218,7 +220,7 @@ function App() {
                 <a href="tel:08023443636"><i className="fas fa-phone-alt"></i> 08023443636</a>
               </li>
               <li>
-                <a href="mailto:abhishek@mpmohan.com"><i className="fas fa-envelope"></i> abhishek@mpmohan.com</a>
+                <a href="mailto:abhishek@mpmohanandco.com"><i className="fas fa-envelope"></i> abhishek@mpmohanandco.com</a>
               </li>
             </ul>
           </div>
@@ -246,8 +248,8 @@ function App() {
               <a href="#" className="social-in"><i className="fab fa-instagram"></i></a>
             </div> */}
             <h4 className="foot-heading">HEAD OFFICE</h4>
-            <p className="foot-desc" style={{ marginTop: '10px' }}>
-              No. 78, Sai Sharan Heights, 5th Floor, Above ICICI Bank, 15th Cross, Margosa Road, MES College Road, Malleshwaram, Bangalore - 560003
+            <p className="foot-desc" style={{ marginTop: '10px', textAlign: 'left' }}>
+              No. 31, 1st Floor, Jyothy compound, Shankarapura, Bangalore - 560004, Karnataka.
             </p>
           </div>
         </div>
@@ -289,18 +291,19 @@ function App() {
           </div>
         </div>
 
-        <div className="footer-bottom-logos">
+        {/* <div className="footer-bottom-logos">
           <div className="footer-mgi-logo">
             <h1 style={{ color: 'var(--primary)', fontSize: '2rem', margin: 0 }}>MP Mohan & Co</h1>
           </div>
           <div className="footer-disclaimer">
             MP Mohan & Co is a network of independent accounting, legal and consulting firms. MGI Worldwide does not provide any services and its member firms are not an international partnership. Each member firm is a separate entity and none of MGI Worldwide, MGI Ltd., nor any member firm accepts responsibility for the activities, work, opinions or services of any other member firm. For more information visit www.mgiworld.com/legal
           </div>
-        </div>
+        </div> */}
 
         {/* Copyright */}
         <div className="footer-copyright">
           <p>&copy; {new Date().getFullYear()} MP Mohan & Co. All rights reserved.</p>
+          <p>Developed and maintained by ptworks</p>
         </div>
       </footer>
 
@@ -320,7 +323,7 @@ function App() {
               <h2>Feel free to reach out with any queries.</h2>
               <p style={{ color: 'var(--accent)' }}>I typically respond within a few hours!</p>
               <div className="modal-person">
-                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=200&h=200" alt="CA Ankith C Shetty" />
+                <img src={mpmohan} alt="MP Mohan" />
                 <h4 style={{ color: 'var(--accent)' }}>CA M P Mohan</h4>
                 <span>Partner</span>
               </div>
