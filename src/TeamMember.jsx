@@ -34,7 +34,7 @@ function TeamMember() {
       </button>
 
       <div className="about-grid" style={{ background: '#fff', padding: '3rem', borderRadius: '8px', boxShadow: '0 5px 15px rgba(0,0,0,0.05)' }}>
-        <div className="team-photo-wrap" style={{ width: '300px', height: '300px', border: '5px solid var(--bcs-teal)', margin: '0 auto' }}>
+        <div className="team-photo-wrap" style={{ width: '100%', border: '5px solid var(--bcs-teal)', margin: '0 auto' }}>
           <img src={member.image} alt={member.name} className="team-photo" />
         </div>
         
