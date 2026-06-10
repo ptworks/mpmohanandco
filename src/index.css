@@ -227,7 +227,7 @@ ul { list-style: none; }
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 1rem;
   align-items: center;
 }
 
@@ -236,10 +236,19 @@ ul { list-style: none; }
   text-align: justify;
 }
 
+.about-text {
+  padding-right:10%;
+}
+
 .about-image {
-  width: 100%;
+  width: 500px;
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  height: 500px;
+}
+
+.about-image-wrapper {
+  margin:0 auto;
 }
 
 /* Services Grid */
@@ -759,6 +768,10 @@ ul { list-style: none; }
   .interactive-team-container { grid-template-columns: 1fr; gap: 2rem; }
   .circle-layout { margin: 2rem auto; }
   .footer-col { grid-column: span 1 !important; }
+  .about-image {  width: 100%; }
+  .about-text {
+    padding-right:0px;
+  }
 }
 
 @media (max-width: 768px) {
