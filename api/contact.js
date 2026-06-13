@@ -20,6 +20,7 @@ export default async function handler(req, res) {
 
         console.log("SMTP_USER:", process.env.SMTP_USER);
 console.log("Password Length:", process.env.SMTP_PASSWORD?.length);
+console.log("sssssssss")
     const transporter = nodemailer.createTransport({
        host: 'smtpout.secureserver.net',
    port: 587,
@@ -33,6 +34,8 @@ console.log("Password Length:", process.env.SMTP_PASSWORD?.length);
         pass: process.env.SMTP_PASSWORD
       }
     });
+
+    console.log('Before verify');
 
     await transporter.verify();
 
