@@ -414,7 +414,7 @@ const handleSubmit = async (e) => {
                 </div>
                 <div className="form-group">
                   <label>Service</label>
-                  <select defaultValue="" name="service" 
+                  <select name="service" 
                       value={formData.service}
                       onChange={handleChange}>
                     <option value="" disabled>Please Select</option>
