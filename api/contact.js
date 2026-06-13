@@ -22,8 +22,9 @@ export default async function handler(req, res) {
 console.log("Password Length:", process.env.SMTP_PASSWORD?.length);
     const transporter = nodemailer.createTransport({
        host: 'smtpout.secureserver.net',
-  port: 465,
-  
+   port: 587,
+  secure: false,
+  requireTLS: true,
       connectionTimeout: 30000,
       greetingTimeout: 30000,
       socketTimeout: 30000,
@@ -57,6 +58,7 @@ console.log("Password Length:", process.env.SMTP_PASSWORD?.length);
       `
     });
 
+    console.log('MAIL INFO:', JSON.stringify(info, null, 2));
     return res.status(200).json({
       success: true
     });
