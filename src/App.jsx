@@ -351,14 +351,12 @@ const handleSubmit = async (e) => {
             MP Mohan & Co is a network of independent accounting, legal and consulting firms. MGI Worldwide does not provide any services and its member firms are not an international partnership. Each member firm is a separate entity and none of MGI Worldwide, MGI Ltd., nor any member firm accepts responsibility for the activities, work, opinions or services of any other member firm. For more information visit www.mgiworld.com/legal
           </div>
         </div> */}
-
-        {/* Copyright */}
+      </footer>
+              {/* Copyright */}
         <div className="footer-copyright">
           <p>&copy; {new Date().getFullYear()} MP Mohan & Co. All rights reserved.</p>
           <p>Developed and maintained by ptworks</p>
         </div>
-      </footer>
-
       {/* Floating Elements */}
       <div className="floating-enquire" onClick={() => setIsEnquiryModalOpen(true)}>
         ENQUIRE NOW

@@ -614,10 +614,11 @@ ul { list-style: none; }
 .footer-copyright {
   text-align: center;
   padding-top: 15px;
-  margin-top: 25px;
+  padding-bottom:15px;
   border-top: 1px dashed #ccc;
   font-size: 0.85rem;
-  color: #555;
+  color: #fff;
+  background-color:#145886;
 }
 
 /* Floating Enquire Tab */
@@ -836,20 +837,15 @@ ul { list-style: none; }
   text-align: center;
   font-size: 2rem;
   font-weight: 900;
-  color: var(--primary);
+  color: #145886;
   margin-bottom: 2rem;
   line-height: 1.2;
 }
 
-.job-app-logo span {
-  color: var(--accent);
-}
-
 .job-app-subtitle {
   font-size: 0.9rem;
-  color: var(--accent);
+  color: rgb(243, 121, 32);
   font-weight: normal;
-  text-transform: lowercase;
 }
 
 .job-app-intro {
@@ -906,7 +902,7 @@ ul { list-style: none; }
 }
 
 .job-submit-btn {
-  background: var(--primary);
+  background: #145886;
   color: white;
   border: none;
   padding: 12px 30px;
@@ -918,7 +914,7 @@ ul { list-style: none; }
 }
 
 .job-submit-btn:hover {
-  background: var(--accent);
+  background: rgb(243, 121, 32);
 }
 
 /* Service Detail Page */

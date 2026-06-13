@@ -10,12 +10,14 @@ export default async function handler(req, res) {
 
   try {
     const {
-      firstName,
       email,
+      firstName,
+      lastName,
       phone,
-      city,
-      service,
-      message
+      experience,
+      exams,
+      current,
+      expected
     } = req.body;
 
     const transporter = nodemailer.createTransport({
@@ -27,9 +29,9 @@ export default async function handler(req, res) {
        greetingTimeout: 30000,
        socketTimeout: 30000,
        auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASSWORD
-      }
+            user: process.env.SMTP_USER,
+            pass: process.env.SMTP_PASSWORD
+        }
     });
 
    await transporter.verify();
@@ -41,12 +43,14 @@ export default async function handler(req, res) {
       subject: 'Website Enquiry',
       html: `
         <h2>New Enquiry</h2>
-        <p><b>Name:</b> ${firstName}</p>
         <p><b>Email:</b> ${email}</p>
+        <p><b>First Name:</b> ${firstName}</p>
+        <p><b>Last Name:</b> ${lastName}</p>
         <p><b>Phone:</b> ${phone}</p>
-        <p><b>City:</b> ${city}</p>
-        <p><b>Service:</b> ${service}</p>
-        <p><b>Message:</b> ${message}</p>
+        <p><b>Experience:</b> ${experience}</p>
+        <p><b>Are you planning to write CA Final exams?</b> ${exams}</p>
+        <p><b>Current CTC:</b> ${current}</p>
+        <p><b>Expected CTC:</b> ${expected}</p>
       `
     });
     return res.status(200).json({
