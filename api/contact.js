@@ -19,7 +19,7 @@ export default async function handler(req, res) {
     } = req.body;
 
     const transporter = nodemailer.createTransport({
-      host: 'smtp.office365.com',
+      host: 'smtp.titan.email',
       port: 587,
       secure: false,
       auth: {
@@ -27,6 +27,8 @@ export default async function handler(req, res) {
         pass: process.env.SMTP_PASSWORD
       }
     });
+
+    await transporter.verify();
 
     await transporter.sendMail({
       from: process.env.SMTP_USER,
