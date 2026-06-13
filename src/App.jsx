@@ -22,6 +22,58 @@ function App() {
   const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
   const location = useLocation();
 
+  const [formData, setFormData] = useState({
+  firstName: '',
+  email: '',
+  phone: '',
+  city: '',
+  service: '',
+  message: ''
+});
+
+const handleChange = (e) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value
+  });
+};
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      alert('Enquiry Submitted Successfully');
+
+      setFormData({
+        firstName: '',
+        email: '',
+        phone: '',
+        city: '',
+        service: '',
+        message: ''
+      });
+
+      setIsEnquiryModalOpen(false);
+    } else {
+      alert(result.message);
+    }
+  } catch (error) {
+    console.error(error);
+    alert('Failed to submit enquiry');
+  }
+};
+
   useEffect(() => {
     if (location.hash) {
       setTimeout(() => {
@@ -248,7 +300,7 @@ function App() {
               <a href="#" className="social-in"><i className="fab fa-instagram"></i></a>
             </div> */}
             <h4 className="foot-heading">HEAD OFFICE</h4>
-            <p className="foot-desc" style={{ marginTop: '10px', textAlign: 'left' }}>
+            <p className="foot-desc" style={{ marginTop: '10px', textAlign: 'leftgit' }}>
               No. 31, 1st Floor, Jyothy compound, Shankarapura, Bangalore - 560004, Karnataka.
             </p>
           </div>
@@ -329,26 +381,42 @@ function App() {
               </div>
             </div>
             <div className="modal-right">
-              <form onSubmit={(e) => { e.preventDefault(); alert('Enquiry Submitted!'); setIsEnquiryModalOpen(false); }}>
+              <form onSubmit={handleSubmit}>
                 <div className="form-group">
                   <label>First name<span className="req">*</span></label>
-                  <input type="text" required />
+                  <input type="text" 
+                      name="firstName" 
+                      value={formData.firstName}
+                      onChange={handleChange} required />
                 </div>
                 <div className="form-group">
                   <label>Email<span className="req">*</span></label>
-                  <input type="email" required />
+                  <input type="email" 
+                      name="email" 
+                      value={formData.email}
+                      onChange={handleChange}
+                  required />
                 </div>
                 <div className="form-group">
                   <label>Phone number<span className="req">*</span></label>
-                  <input type="tel" required />
+                  <input type="tel" 
+                      name="phone" 
+                      value={formData.phone}
+                      onChange={handleChange} required />
                 </div>
                 <div className="form-group">
                   <label>City</label>
-                  <input type="text" />
+                  <input type="text" 
+                      name="city" 
+                      value={formData.city}
+                      onChange={handleChange}
+                  />
                 </div>
                 <div className="form-group">
                   <label>Service</label>
-                  <select defaultValue="">
+                  <select defaultValue="" name="service" 
+                      value={formData.service}
+                      onChange={handleChange}>
                     <option value="" disabled>Please Select</option>
                     <option value="tax">Taxation</option>
                     <option value="audit">Audit</option>
@@ -357,15 +425,17 @@ function App() {
                 </div>
                 <div className="form-group">
                   <label>Additional information</label>
-                  <textarea rows="3"></textarea>
+                  <textarea rows="3" 
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}></textarea>
                 </div>
-                <div className="recaptcha-placeholder">
+                {/* <div className="recaptcha-placeholder">
                   <span>protected by <strong>reCAPTCHA</strong></span>
                   <i className="fas fa-sync" style={{ fontSize: '1.5rem', color: '#1a73e8' }}></i>
-                </div>
+                </div> */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
                   <button type="submit" className="submit-btn-orange" style={{ background: 'var(--accent)', color: 'var(--primary)' }}>Submit</button>
-                  <span style={{ fontSize: '0.8rem', color: '#555' }}>Create your own free forms to generate leads</span>
                 </div>
               </form>
             </div>

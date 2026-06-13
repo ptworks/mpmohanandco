@@ -363,6 +363,10 @@ ul { list-style: none; }
   margin: 0 auto;
 }
 
+.team-photo-wrap img {
+  width:100%;
+}
+
 .team-details-left {
   background: #ffffff;
   padding: 3rem;
@@ -776,7 +780,7 @@ ul { list-style: none; }
 
 @media (max-width: 768px) {
   .header-top { flex-direction: column; text-align: center; gap: 15px; }
-  .header-contact { flex-direction: column; gap: 10px; }
+  .header-contact { flex-direction: column; gap: 10px; margin-bottom:10px }
   .hamburger { display: block; }
   .nav-links {
     display: none;
@@ -809,6 +813,7 @@ ul { list-style: none; }
   .modal-left, .modal-right { width: 100%; }
   .floating-enquire { display: none; }
   .job-application-card { padding: 2rem; }
+  .logotitle div {padding-left:0px}
 }
 
 /* Career Page Job Application */
