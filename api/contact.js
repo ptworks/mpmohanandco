@@ -43,6 +43,7 @@ console.log("Password Length:", process.env.SMTP_PASSWORD?.length);
     await transporter.sendMail({
       from: process.env.SMTP_USER,
       to: 'info@mpmohanandco.com',
+      cc: 'tiru.prasad73@gmail.com',
       replyTo: email,
       subject: 'Website Enquiry',
       html: `
