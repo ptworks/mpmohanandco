@@ -40,7 +40,7 @@ console.log("Password Length:", process.env.SMTP_PASSWORD?.length);
   success: true,
   verified: true
 });
-
+console.log('Before sendMail');
    const info =  await transporter.sendMail({
       from: process.env.SMTP_USER,
       to: 'info@mpmohanandco.com',
@@ -58,7 +58,8 @@ console.log("Password Length:", process.env.SMTP_PASSWORD?.length);
       `
     });
 
-    console.log('MAIL INFO:', JSON.stringify(info, null, 2));
+    console.log('After sendMail');
+console.log('MAIL INFO:', info);
     return res.status(200).json({
       success: true
     });
