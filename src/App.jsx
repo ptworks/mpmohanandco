@@ -51,7 +51,7 @@ const handleSubmit = async (e) => {
     });
 
     const result = await response.json();
-
+    console.log('API Response:', result);
     if (result.success) {
       alert('Enquiry Submitted Successfully');
 
@@ -66,7 +66,7 @@ const handleSubmit = async (e) => {
 
       setIsEnquiryModalOpen(false);
     } else {
-      alert(result.message);
+      alert(result.message || result.error || 'Failed to submit enquiry');
     }
   } catch (error) {
     console.error(error);
