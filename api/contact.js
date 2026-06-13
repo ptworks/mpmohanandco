@@ -21,10 +21,9 @@ export default async function handler(req, res) {
         console.log("SMTP_USER:", process.env.SMTP_USER);
 console.log("Password Length:", process.env.SMTP_PASSWORD?.length);
     const transporter = nodemailer.createTransport({
-       host: 'smtp.titan.email',
-  port: 587,
-  secure: false,
-  requireTLS: true,
+       host: 'smtpout.secureserver.net',
+  port: 465,
+  
       connectionTimeout: 30000,
       greetingTimeout: 30000,
       socketTimeout: 30000,
