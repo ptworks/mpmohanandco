@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
 
-module.exports = async (req, res) => {
+export default async function handler(req, res) {
   try {
     const {
       firstName,
@@ -37,13 +37,16 @@ module.exports = async (req, res) => {
       `
     });
 
-    return res.status(200).json({ success: true });
+    return res.status(200).json({
+      success: true
+    });
 
   } catch (err) {
-    console.error(err);
+    console.error('Email Error:', err);
+
     return res.status(500).json({
       success: false,
       error: err.message
     });
   }
-};
+}
