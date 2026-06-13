@@ -39,11 +39,7 @@ console.log("sssssssss")
 
     await transporter.verify();
 
-    return res.status(200).json({
-  success: true,
-  verified: true
-});
-console.log('Before sendMail');
+  console.log('Before sendMail');
    const info =  await transporter.sendMail({
       from: process.env.SMTP_USER,
       to: 'info@mpmohanandco.com',
