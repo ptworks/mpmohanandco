@@ -3,6 +3,7 @@ import './index.css';
 import calogo from '../src/assets/calogo.png'
 
 function Career() {
+  const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
   const [formData, setFormData] = useState({
     email: '',
     firstName: '',
