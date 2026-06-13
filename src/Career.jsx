@@ -23,7 +23,7 @@ function Career() {
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+    console.log('SUBMIT CALLED');
     try {
       const response = await fetch('/api/career', {
         method: 'POST',
